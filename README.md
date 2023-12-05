@@ -1,3 +1,4 @@
+# Le code fourni avec des commentaires : 
 //Bloc d'inclusions des bibliotheques 
 
 #include <stdlib.h>
@@ -26,7 +27,7 @@ long long temps_exec( struct timespec start, struct timespec end){
 
 
 //Fonction principale (main)
-int main() { 
+int main() {
     
     //Initialisation des variables et affichage d'un message de bienvenue:
     char input[BUFFSIZE];
