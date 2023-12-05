@@ -1,33 +1,33 @@
 # Le code fourni avec des commentaires : 
-//Bloc d'inclusions des bibliotheques 
+       //Bloc d'inclusions des bibliotheques 
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <string.h>
-#include <time.h>
-/* Ce bloc comprend les bibliothèques essentielles au programme, telles que les bibliothèques standard d'entrées/sorties, de gestion des processus, de gestion du temps, etc.*/
-
-
-
-//Définition de la taille du tampon
-#define BUFFSIZE 128 
-//Définit la taille du tampon utilisé pour stocker l'entrée de l'utilisateur.
+        #include <stdlib.h>
+        #include <stdio.h>
+        #include <unistd.h>
+        #include <sys/types.h>
+        #include <sys/wait.h>
+        #include <string.h>
+        #include <time.h>
+    /* Ce bloc comprend les bibliothèques essentielles au programme, telles que les bibliothèques standard d'entrées/sorties, de gestion des processus, de gestion du temps, etc.*/
 
 
 
-/* Fonction qui calcul le temps d'exécution :
-Cette fonction prend deux horodatages et retourne la différence en millisecondes entre eux.*/
-long long temps_exec( struct timespec start, struct timespec end){
+    //Définition de la taille du tampon
+    #define BUFFSIZE 128 
+    //Définit la taille du tampon utilisé pour stocker l'entrée de l'utilisateur.
+
+
+
+    /* Fonction qui calcul le temps d'exécution :
+    Cette fonction prend deux horodatages et retourne la différence en millisecondes entre eux.*/
+    long long temps_exec( struct timespec start, struct timespec end){
     return (end.tv_nsec - start.tv_nsec)/100000000;
-} 
+    } 
 
 
 
-//Fonction principale (main)
-int main() {
+    //Fonction principale (main)
+    int main() {
     
     //Initialisation des variables et affichage d'un message de bienvenue:
     char input[BUFFSIZE];
@@ -100,4 +100,4 @@ int main() {
         }   
     }
     return 0;
-}
+    }
